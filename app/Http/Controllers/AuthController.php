@@ -44,40 +44,6 @@ class AuthController extends Controller
         ],200);
     }
 
-    // public function login(Request $request)s
-    // {
-    //     $nim = $request->nim;
-    //     $password = $request->password;
-
-    //     $user = Mahasiswa::where('nim', $nim)->first();
-
-    //     if (!$user) {
-    //         return response()->json([
-    //             'status' => 'Error',
-    //             'message' => 'user not exist',
-    //         ],404);
-    //     }
-
-    //     if (!Hash::check($password, $user->password)) {
-    //         return response()->json([
-    //             'status' => 'Error',
-    //             'message' => 'wrong password',
-    //         ],400);
-    //     }
-
-    //     // $idprodi = DB::select("SELECT idProdi FROM mahasiswas");
-    //     // $prodi = Prodi::where('idProdi', print_r($idprodi))->first();
-
-    //     return response()->json([
-    //         'status' => 'Success',
-    //         'message' => 'successfully login',
-    //         'data' => [
-    //             'user' => $user,
-    //             // 'prodi' => $prodi,
-    //         ]
-    //     ],200);
-    // }
-
     public function login(Request $request)
     {
       $nim = $request->nim;
